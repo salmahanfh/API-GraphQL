@@ -49,10 +49,10 @@ describe('API Test Negative from GraphQL', function () {
             .put(`/public/v2/users/6901360`) 
             .set('Authorization', `Bearer ${accessToken}`)
             .send({
-                "color":"Salma Hanifah edit" //invalid data: "color" is not exist
+                "email":"nambeesan_bhadra@botsford.example" //invalid data: email already exist
             });
-        expect(response.status).to.equal(200);
-        console.log(response);
+            expect(response.status).to.equal(422);
+        console.log(response.body);
     });
 
     //Delete user

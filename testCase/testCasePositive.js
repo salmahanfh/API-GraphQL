@@ -59,7 +59,7 @@ describe('API Test Positive from GraphQL', function () {
             });
         expect(response.status).to.equal(200);
         expect(response.body.name).to.equal("Salma Hanifah edit");
-        console.log(response);
+        console.log(response.body);
     });
 
     //Delete user
